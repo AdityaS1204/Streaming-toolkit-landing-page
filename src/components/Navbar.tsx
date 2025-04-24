@@ -1,3 +1,4 @@
+import { Menu, X } from 'lucide-react'
 import logo from '../assets/logo.png'
 import { useState } from "react"
 
@@ -25,17 +26,47 @@ const Navbar = () => {
           </a>
         </div>
         <div className="hidden md:flex space-x-4">
-          <a href="#" className='hover:text-neutral-200'>
+          <a href="#" className='hover:text-neutral-200 py-2 px-4'>
             Login
           </a>
           <a href="#" className='hover:text-neutral-200 border border-neutral-700 text-white py-2 px-4 rounded-lg hover:bg-neutral-700 transition'>
             Get a Demo
           </a>
-          <a href="#" className='hover:text-neutral-200 bg-blue-600 hover:bg-blue-500 transition rounded-lg'>
-  Start Free Trial
+          <a href="#" className='hover:text-neutral-100 text-neutral-200 bg-blue-600 hover:bg-blue-500 transition rounded-lg py-2 px-4'>
+            Start Free Trial
           </a>
         </div>
+        <div className='md:hidden'>
+          <button onClick={toggleMenu} className='text-white outline-none ' aria-label={isopen ? "Close Menu" : "Open Menu"}>
+            {isopen ? <X  className='hover:cursor-pointer'/> : <Menu className='hover:cursor-pointer' />}
+          </button>
+
+        </div>
       </div>
+      {isopen && (
+        <div className="md:hidden bg-neutral-900/60 backdrop-blur-md border border-neutral-800 p-4 mt-2 rounded-xl">
+          <div className="flex flex-col space-y-4">
+            <a href="#works" className='hover:text-neutral-200'>
+              Products
+            </a>
+            <a href="#works" className='hover:text-neutral-200'>
+              Pricing
+            </a>
+            <a href="#works" className='hover:text-neutral-200'>
+              Resources
+            </a>
+            <a href="#works" className='hover:text-white'>
+              Login
+            </a>
+            <a href="#" className='hover:text-neutral-200 border border-neutral-700 text-white py-2 px-4 rounded-lg hover:bg-neutral-700 transition'>
+              Get a Demo
+            </a>
+            <a href="#" className='hover:text-neutral-200 bg-blue-600 hover:bg-blue-500 transition rounded-lg py-2 px-4'>
+              Start Free Trial
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
