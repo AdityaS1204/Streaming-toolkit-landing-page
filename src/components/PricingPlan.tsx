@@ -54,9 +54,9 @@ const PricingPlan = () => {
                                     </span>
                                 </div>
                             )}
-                            <h3 className="text-lg lg:text-xl tracking-tighter uppercase mb-4">{Plan.name}</h3>
-                            <p className="text-neutral-400 mb-6">{Plan.description}</p>
-                            <div className="text-2xl lg:text-3xl font-medium mb-6">{Plan.price}</div>
+                            <h3 className="text-lg lg:text-xl tracking-tighter uppercase mb-4 text-white">{Plan.name}</h3>
+                            <p className="text-neutral-400 mb-6 ">{Plan.description}</p>
+                            <div className="text-2xl lg:text-3xl font-medium mb-6 text-white">{Plan.price}</div>
                             <ul className='text-neutral-400 mb-8 space-y-2'>
                                 {Plan.features.map((feature, index) => (
                                     <li key={index} className='flex items-center'>
