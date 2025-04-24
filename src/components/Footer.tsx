@@ -1,6 +1,4 @@
-import { motion } from 'motion/react'
 import { FOOTER_CONTENT } from '../constants'
-import { div, li } from 'motion/react-client'
 
 const Footer = () => {
     return (

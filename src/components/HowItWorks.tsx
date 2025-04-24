@@ -6,7 +6,7 @@ import { HOW_IT_WORKS_CONTENT } from "../constants"
 const HowItWorks = () => {
   const stepVariant = {
     hidden: { opacity: 0,y:50 },
-    visible:(i)=>({
+    visible:(i:number)=>({
       opacity:1,
       y:0,
       transition: {
